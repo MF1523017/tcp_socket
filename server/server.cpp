@@ -2,7 +2,7 @@
 #include<iostream>
 #include<arpa/inet.h>
 Server::Server(const char *port) :Common("", port) {
-	
+	_addr.sin_addr.s_addr = htonl(INADDR_ANY);//INADDR_ANY
 	_server_fd = socket(AF_INET, SOCK_STREAM, 0);
 	bind(_server_fd,(SA*)&_addr, sizeof(_addr));
 	_listen(_server_fd, 10);

@@ -8,7 +8,7 @@ Common::Common(const char *hostname,const char *port)
 {
 	bzero(&_addr, sizeof(_addr));
 	_addr.sin_family = AF_INET;
-	_addr.sin_addr.s_addr = htonl(INADDR_ANY);//INADDR_ANY
+//	_addr.sin_addr.s_addr = htonl(INADDR_ANY);//INADDR_ANY
 	//std::cout << "_addr.sin_addr.s_addr="<<_addr.sin_addr.s_addr << std::endl;
 	_addr.sin_port = htons(static_cast<short>(atoi(port)));
 	std::cout << "_addr.sin_port=" << _addr.sin_port << std::endl;
