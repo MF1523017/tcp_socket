@@ -1,8 +1,10 @@
 #include <cstdio>
 #include"server.h"
 #include"common.h"
+#include"client.h"
 int main()
 {
-	testServer();
-    return 0;
+//	testServer();
+	testClient();
+	return 0;
 }
