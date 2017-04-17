@@ -17,7 +17,7 @@ Common::Common(const char *hostname,const char *port)
 string Common::sock_ntop()
 {
 	char str[128];
-	if (inet_ntop(AF_INET, &_addr.sin_addr, str, sizeof(str)) == nullptr)
+	if (inet_ntop(AF_INET, &_addr.sin_addr, str, sizeof(str)) == NULL)
 		return string("");
 	return string(str);
 }

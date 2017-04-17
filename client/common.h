@@ -9,7 +9,7 @@ class Common
 	
 protected:
 	struct sockaddr_in _addr;
-
+    const int max_buffer=1024;
 public:
 	typedef struct sockaddr SA;
 	Common(const char *hostname, const char *port);
